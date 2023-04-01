@@ -26,7 +26,6 @@ resource 'PiPL' (16000) {
 #else
 	#ifdef AE_OS_MAC
 		CodeMacIntel64 {"EffectMain"},
-		CodeMacARM64 {"EffectMain"},
 	#endif
 #endif
 		/* [6] */
@@ -53,7 +52,7 @@ resource 'PiPL' (16000) {
 
 		},
 		AE_Effect_Global_OutFlags_2 {
-		0x00000000
+		0x00001400
 		},
 		/* [11] */
 		AE_Effect_Match_Name {
