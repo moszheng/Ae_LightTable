@@ -19,26 +19,14 @@
 /*                                                                 */
 /*******************************************************************/
 
-#include "Skeleton.h"
+#ifndef _AEIO_FileExt_Public_H
+#define _AEIO_FileExt_Public_H
+
+#include <A.h>
 
 typedef struct {
-	A_u_long	index;
-	A_char		str[256];
-} TableString;
+	A_char	pad;				// constant: always '.'
+	A_char	extension[3];
+} AEIO_FileExt;
 
-
-
-TableString		g_strs[StrID_NUMTYPES] = {
-	StrID_NONE,						"",
-	StrID_Name,						"Skeleton",
-	StrID_Description,				"An empty (skeletal, if you will) effect sample,\r for your modifying pleasure.\rCopyright 2007 Adobe Systems Incorporated.",
-	StrID_Gain_Param_Name,			"Gain",
-	StrID_Color_Param_Name,			"Color",
-};
-
-
-char	*GetStringPtr(int strNum)
-{
-	return g_strs[strNum].str;
-}
-	
+#endif	//	_AEIO_FileExt_Public_H
